@@ -12,11 +12,11 @@ class Raftt < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/mac"
-      sha256 "dfb92a8cfc3875752a7d235bd2dfd5aa40b14f51b0b6bfa19b320a31d691e828"
+      sha256 "b21dce15894882148a95ea0205820e6daa0acb3d71efbff8094dddc3ca64562b"
     end
     if Hardware::CPU.arm?
       url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/mac"
-      sha256 "25152bc37a67e5ca3f2052db9b2289a6927fa116b20b2590219dd984333c4eaa"
+      sha256 "e8e82544d4b94cb7a1c2d92c29fcd3fa3304d0ee780fcc30bbbb9dfab997c188"
     end
   end
 

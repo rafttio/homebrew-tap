@@ -11,12 +11,12 @@ class Raftt < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rafttio/raftt/releases/download/v13.0.2-alpha/raftt_13.0.2-alpha_Darwin_amd64.tar.gz"
-      sha256 "7a856609d84457086774bab9e75ddba7fc0b30369b079ea8ab6e6f4f937d377c"
+      url "https://github.com/rafttio/raftt/releases/download/v13.0.2-alpha/raftt_13.0.2-alpha_Darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "662b11b063de05d7891489c72b934a67177808a828864a06e3dc452b3b1c69d0"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rafttio/raftt/releases/download/v13.0.2-alpha/raftt_13.0.2-alpha_Darwin_arm64.tar.gz"
-      sha256 "c7225465a47c34f65d591fc4649edfc1fc5faa49ce826734abafb17523f351fe"
+      url "https://github.com/rafttio/raftt/releases/download/v13.0.2-alpha/raftt_13.0.2-alpha_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "54f2a550c354b0604625b263a98b2a3eca62932e0dd7ef3ce24f6a6eed78ed74"
     end
   end
 

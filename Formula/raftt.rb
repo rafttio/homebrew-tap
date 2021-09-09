@@ -10,23 +10,23 @@ class Raftt < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/darwin"
-      sha256 "eec80cb601eaced6e13c2b50c19cc9f1c2d545635e7dedd5b0489a50cb080194"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/raftt_13.0.2-alpha_darwin_amd64.tar.gz"
+      sha256 "f8a8a694580f147ba90d794691540693a5192b37ad1cd2fdcff733f3f04e1888"
     end
     if Hardware::CPU.arm?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/darwin"
-      sha256 "bf0ca2d5d187f1b18fa9e2f7cb2a457f008fcd8bd0e5314e9f47bac34ffe0494"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/raftt_13.0.2-alpha_darwin_arm64.tar.gz"
+      sha256 "26f996265abfb397a7b0744328f926835d83f227d7cb8ad6b8d07a2aefdbc620"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/linux"
-      sha256 "40614ef33ec39ce2543215c480c4b015f65bdb1b5f0df42bea6d3c163dec5022"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/raftt_13.0.2-alpha_linux_amd64.tar.gz"
+      sha256 "3a3e1f488b1f1edb38781c66182ad0334fa46b03c72d92c1adaec91969d26397"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/linux"
-      sha256 "07ae3c181a7184abe4ab1c6d1b510e3cd0d731dff3a9fe57ffc33940a95a9f43"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/raftt_13.0.2-alpha_linux_arm64.tar.gz"
+      sha256 "e522c7fb8725399d443075f4ff60c09850a3eabe2ed2d93f37862d08b0e66a65"
     end
   end
 

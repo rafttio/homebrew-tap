@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install rafttio/tap/<formula>`
+`brew install rafttio/tap/raftt`
 
-Or `brew tap rafttio/tap` and then `brew install <formula>`.
+Or `brew tap rafttio/tap` and then `brew install raftt`.
 
 ## Documentation
 

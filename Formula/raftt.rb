@@ -5,28 +5,20 @@
 class Raftt < Formula
   desc "Manage your development environment with ease"
   homepage "https://raftt.io/"
-  version "13.0.2-alpha"
+  version "17.0.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/raftt_13.0.2-alpha_darwin_amd64.tar.gz"
-      sha256 "f8a8a694580f147ba90d794691540693a5192b37ad1cd2fdcff733f3f04e1888"
-    end
-    if Hardware::CPU.arm?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/raftt_13.0.2-alpha_darwin_arm64.tar.gz"
-      sha256 "26f996265abfb397a7b0744328f926835d83f227d7cb8ad6b8d07a2aefdbc620"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v17.0.0/raftt_17.0.0_darwin_amd64.tar.gz"
+      sha256 "bfe9eaf4bd0ad0449751a886a96140e873b45826fb3fbcc59e2d154e962c0a0d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/raftt_13.0.2-alpha_linux_amd64.tar.gz"
-      sha256 "3a3e1f488b1f1edb38781c66182ad0334fa46b03c72d92c1adaec91969d26397"
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v13.0.2-alpha/raftt_13.0.2-alpha_linux_arm64.tar.gz"
-      sha256 "e522c7fb8725399d443075f4ff60c09850a3eabe2ed2d93f37862d08b0e66a65"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v17.0.0/raftt_17.0.0_linux_amd64.tar.gz"
+      sha256 "3e161a25ab683fda7678b75e3c9e27cc2e360281ac81229d2cad5b9904aece0b"
     end
   end
 

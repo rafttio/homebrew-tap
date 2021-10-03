@@ -5,20 +5,20 @@
 class Raftt < Formula
   desc "Manage your development environment with ease"
   homepage "https://raftt.io/"
-  version "17.0.0"
+  version "18.0.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v17.0.0/raftt_17.0.0_darwin_amd64.tar.gz"
-      sha256 "bfe9eaf4bd0ad0449751a886a96140e873b45826fb3fbcc59e2d154e962c0a0d"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v18.0.0/raftt_18.0.0_darwin_amd64.tar.gz"
+      sha256 "c3f517bc61686565d52193b7845fb90d44340dd001e8e36feb90537515a9ecc6"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v17.0.0/raftt_17.0.0_linux_amd64.tar.gz"
-      sha256 "3e161a25ab683fda7678b75e3c9e27cc2e360281ac81229d2cad5b9904aece0b"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v18.0.0/raftt_18.0.0_linux_amd64.tar.gz"
+      sha256 "24f4cabc38517cc876712b75ac3f9ec0836a4aa52f9d70e4de71da39feee5699"
     end
   end
 

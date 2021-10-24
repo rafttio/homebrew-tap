@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - remove_bottle_unneeded
   pull_request:
 jobs:
   test-bot:

@@ -6,7 +6,6 @@ class Raftt < Formula
   desc "Manage your development environment with ease"
   homepage "https://raftt.io/"
   version "20.0.1"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

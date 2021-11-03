@@ -5,38 +5,50 @@
 class Raftt < Formula
   desc "Manage your development environment with ease"
   homepage "https://raftt.io/"
-  version "22.1.0"
-  bottle :unneeded
+  version "23.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v22.1.0/raftt_22.1.0_darwin_amd64.tar.gz"
-      sha256 "bfa3670dd24e3997491e92ec4af4198d9d4c5a6b1af45757602c61bb4141173e"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v23.0.0/raftt_23.0.0_darwin_amd64.tar.gz"
+      sha256 "78fa08840a33159f80b8472e7d3553f4e9e2dd15ab11aca1a84c28cb5d122cee"
+
+      def install
+        bin.install "raftt"
+
+        system bin/"raftt completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "raftt"
+
+        system bin/"raftt completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_raftt"
+
+        system bin/"raftt completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "raftt.fish"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v22.1.0/raftt_22.1.0_linux_amd64.tar.gz"
-      sha256 "bc8740fd322ad3e9aefd0596753e2609c0c1a43c8c6e02d7ce91fe39af30c5a5"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v23.0.0/raftt_23.0.0_linux_amd64.tar.gz"
+      sha256 "185bdfcf4946c7a08587a5223554a63c33c059c69ed269f419c0a109226dc182"
+
+      def install
+        bin.install "raftt"
+
+        system bin/"raftt completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "raftt"
+
+        system bin/"raftt completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_raftt"
+
+        system bin/"raftt completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "raftt.fish"
+      end
     end
   end
 
   depends_on "bash"
   depends_on "git"
-
-  def install
-    bin.install "raftt"
-
-    system bin/"raftt completion bash > bash_completion.bash"
-    bash_completion.install "bash_completion.bash" => "raftt"
-
-    system bin/"raftt completion zsh > zsh_completion.zsh"
-    zsh_completion.install "zsh_completion.zsh" => "_raftt"
-
-    system bin/"raftt completion fish > fish_completion.fish"
-    fish_completion.install "fish_completion.fish" => "raftt.fish"
-  end
 
   test do
     system "#{bin}/raftt version"

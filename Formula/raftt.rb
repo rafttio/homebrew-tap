@@ -5,15 +5,17 @@
 class Raftt < Formula
   desc "Manage your development environment with ease"
   homepage "https://raftt.io/"
-  version "24.0.0"
+  version "25.0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v24.0.0/raftt_24.0.0_darwin_amd64.tar.gz"
-      sha256 "e218a0523f8c99c45bb9a2a5fbcd1161affedcf145f294da8fe0393e1b86fcec"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v25.0.1/raftt_25.0.1_darwin_amd64.tar.gz"
+      sha256 "ec6b3c764e1a73a28c62383a46a9cc8e46a287cb00a3fa422b9a1d1cb1f3a655"
 
       def install
         bin.install "raftt"
+
+        system "which git" # Verify git is available
 
         system bin/"raftt completion bash > bash_completion.bash"
         bash_completion.install "bash_completion.bash" => "raftt"
@@ -29,11 +31,13 @@ class Raftt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v24.0.0/raftt_24.0.0_linux_amd64.tar.gz"
-      sha256 "59fdf6372251f7c9c82dd81a28d0db2fa14a59a96003e3e3a4c6c31bd00c095a"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v25.0.1/raftt_25.0.1_linux_amd64.tar.gz"
+      sha256 "92a37b347afe5ea3eaa02b80913c906d09026cad61256697ef20206d5e138ad7"
 
       def install
         bin.install "raftt"
+
+        system "which git" # Verify git is available
 
         system bin/"raftt completion bash > bash_completion.bash"
         bash_completion.install "bash_completion.bash" => "raftt"
@@ -48,7 +52,6 @@ class Raftt < Formula
   end
 
   depends_on "bash"
-  depends_on "git"
 
   test do
     system "#{bin}/raftt version"

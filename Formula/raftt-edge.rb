@@ -6,12 +6,52 @@ class RafttEdge < Formula
   desc "Manage your development environment with ease - edge version, might be unstable"
   homepage "https://raftt.io/"
   version "0.0.0-alpha-testing"
-  depends_on :linux
+
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v0.0.0-alpha-testing/raftt_0.0.0-alpha-testing_darwin_arm64.tar.gz"
+      sha256 "e4a888b370d2a18b50051cf7c80aa340934a6ce90456095237d1eaf2acf12ce3"
+
+      def install
+        bin.install "raftt-edge"
+
+        system "which git" # Verify git is available
+
+        system bin/"raftt-edge completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "raftt-edge"
+
+        system bin/"raftt-edge completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_raftt-edge"
+
+        system bin/"raftt-edge completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "raftt-edge.fish"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v0.0.0-alpha-testing/raftt_0.0.0-alpha-testing_darwin_amd64.tar.gz"
+      sha256 "4873ec351cc6b0a8892eece655dd7bc2c1779bc59d65dad20eea0d5153de2729"
+
+      def install
+        bin.install "raftt-edge"
+
+        system "which git" # Verify git is available
+
+        system bin/"raftt-edge completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "raftt-edge"
+
+        system bin/"raftt-edge completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_raftt-edge"
+
+        system bin/"raftt-edge completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "raftt-edge.fish"
+      end
+    end
+  end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v0.0.0-alpha-testing/raftt_0.0.0-alpha-testing_linux_amd64.tar.gz"
-      sha256 "d8e50baddd61652e087d525c0fed71216702f5f0c21f390e03a0b2385ecd3acf"
+      sha256 "20aaca3ec224d28c2ddfa54450daa6706643a11342922eb83db154f813e16eb8"
 
       def install
         bin.install "raftt-edge"

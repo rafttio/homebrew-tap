@@ -5,67 +5,67 @@
 class RafttEdge < Formula
   desc "Manage your development environment with ease - edge version, might be unstable"
   homepage "https://raftt.io/"
-  version "0.0.0-alpha-testing"
+  version "30.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v0.0.0-alpha-testing/raftt_0.0.0-alpha-testing_darwin_arm64.tar.gz"
-      sha256 "e4a888b370d2a18b50051cf7c80aa340934a6ce90456095237d1eaf2acf12ce3"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v30.0.3/raftt_30.0.3_darwin_arm64.tar.gz"
+      sha256 "faa6e0b8c5b12fddc9b1f0f56a40ac8cf55430ae4c6375b3099db183bbeaf07f"
 
       def install
-        bin.install "raftt-edge"
+        bin.install "raftt"
 
         system "which git" # Verify git is available
 
-        system bin/"raftt-edge completion bash > bash_completion.bash"
-        bash_completion.install "bash_completion.bash" => "raftt-edge"
+        system bin/"raftt completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "raftt"
 
-        system bin/"raftt-edge completion zsh > zsh_completion.zsh"
-        zsh_completion.install "zsh_completion.zsh" => "_raftt-edge"
+        system bin/"raftt completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_raftt"
 
-        system bin/"raftt-edge completion fish > fish_completion.fish"
-        fish_completion.install "fish_completion.fish" => "raftt-edge.fish"
+        system bin/"raftt completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "raftt.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v0.0.0-alpha-testing/raftt_0.0.0-alpha-testing_darwin_amd64.tar.gz"
-      sha256 "4873ec351cc6b0a8892eece655dd7bc2c1779bc59d65dad20eea0d5153de2729"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v30.0.3/raftt_30.0.3_darwin_amd64.tar.gz"
+      sha256 "73d7ebe1d775401d2536b739433c53fb36618670d180948e1bb500b8572aeac9"
 
       def install
-        bin.install "raftt-edge"
+        bin.install "raftt"
 
         system "which git" # Verify git is available
 
-        system bin/"raftt-edge completion bash > bash_completion.bash"
-        bash_completion.install "bash_completion.bash" => "raftt-edge"
+        system bin/"raftt completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "raftt"
 
-        system bin/"raftt-edge completion zsh > zsh_completion.zsh"
-        zsh_completion.install "zsh_completion.zsh" => "_raftt-edge"
+        system bin/"raftt completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_raftt"
 
-        system bin/"raftt-edge completion fish > fish_completion.fish"
-        fish_completion.install "fish_completion.fish" => "raftt-edge.fish"
+        system bin/"raftt completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "raftt.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v0.0.0-alpha-testing/raftt_0.0.0-alpha-testing_linux_amd64.tar.gz"
-      sha256 "20aaca3ec224d28c2ddfa54450daa6706643a11342922eb83db154f813e16eb8"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v30.0.3/raftt_30.0.3_linux_amd64.tar.gz"
+      sha256 "aec8aebb0089fae69927a6f4b8c3233ff53f88ed8700927539967652b63abbf2"
 
       def install
-        bin.install "raftt-edge"
+        bin.install "raftt"
 
         system "which git" # Verify git is available
 
-        system bin/"raftt-edge completion bash > bash_completion.bash"
-        bash_completion.install "bash_completion.bash" => "raftt-edge"
+        system bin/"raftt completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "raftt"
 
-        system bin/"raftt-edge completion zsh > zsh_completion.zsh"
-        zsh_completion.install "zsh_completion.zsh" => "_raftt-edge"
+        system bin/"raftt completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_raftt"
 
-        system bin/"raftt-edge completion fish > fish_completion.fish"
-        fish_completion.install "fish_completion.fish" => "raftt-edge.fish"
+        system bin/"raftt completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "raftt.fish"
       end
     end
   end
@@ -73,6 +73,6 @@ class RafttEdge < Formula
   depends_on "bash"
 
   test do
-    system "#{bin}/raftt-edge version"
+    system "#{bin}/raftt version"
   end
 end

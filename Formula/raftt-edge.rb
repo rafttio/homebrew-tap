@@ -5,18 +5,17 @@
 class RafttEdge < Formula
   desc "Manage your development environment with ease - edge version, might be unstable"
   homepage "https://raftt.io/"
-  version "37.0.0"
+  version "36.0.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v37.0.0/raftt_37.0.0_darwin_arm64.tar.gz"
-      sha256 "f14d3550ddd5de661888f420c8dc8ef2ec62ea9dbcb43fe86c4fbf4d52bc8c6a"
+    if Hardware::CPU.intel?
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v36.0.4/raftt_36.0.4_darwin_amd64.tar.gz"
+      sha256 "af30a5c7734747e648ca45dde9396d10cf12ec43e1f7c91cd87e5a8fbf9e88ba"
 
       def install
         bin.install "raftt"
 
         system "which git" # Verify git is available
-        system "which ssh" # Verify ssh is available
 
         system bin/"raftt completion bash > bash_completion.bash"
         bash_completion.install "bash_completion.bash" => "raftt"
@@ -28,15 +27,14 @@ class RafttEdge < Formula
         fish_completion.install "fish_completion.fish" => "raftt.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v37.0.0/raftt_37.0.0_darwin_amd64.tar.gz"
-      sha256 "a9dcb87fd1042eb3f42584496e43795fbc453e1823010733d00b2e028f7fe2fd"
+    if Hardware::CPU.arm?
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v36.0.4/raftt_36.0.4_darwin_arm64.tar.gz"
+      sha256 "740881368090354b120467acbe15370690892adebf9a3e80a6f0fe795114e21f"
 
       def install
         bin.install "raftt"
 
         system "which git" # Verify git is available
-        system "which ssh" # Verify ssh is available
 
         system bin/"raftt completion bash > bash_completion.bash"
         bash_completion.install "bash_completion.bash" => "raftt"
@@ -52,14 +50,13 @@ class RafttEdge < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v37.0.0/raftt_37.0.0_linux_amd64.tar.gz"
-      sha256 "bd5a866bdd6ab4416e86d4657dfa8c6b3163819a466ba4b775336d08495cc6f3"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v36.0.4/raftt_36.0.4_linux_amd64.tar.gz"
+      sha256 "1e43c53ca407b2386d043dd3267f65f1bd52dc1845521d3db5b2a9a1b2ab01c8"
 
       def install
         bin.install "raftt"
 
         system "which git" # Verify git is available
-        system "which ssh" # Verify ssh is available
 
         system bin/"raftt completion bash > bash_completion.bash"
         bash_completion.install "bash_completion.bash" => "raftt"

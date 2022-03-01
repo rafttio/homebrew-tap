@@ -5,7 +5,7 @@
 class Raftt < Formula
   desc "Manage your development environment with ease"
   homepage "https://raftt.io/"
-  version "39.0.1"
+  version "39.0.2"
 
   on_macos do
     if Hardware::CPU.arm?

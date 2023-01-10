@@ -55,7 +55,7 @@ class RafttEdge < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v79.0.6/raftt_79.0.6_linux_amd64.tar.gz"
-      sha256 "a72f27fecbcbd6dcfd3b5e19294f1787f6eadc291507bcc73d5ec6f3255f3963"
+      sha256 "2c13fe999cd0d63590bbd2c74b02cb2f9dbaaf00bcd3b1a6d76c4d5ac85e1bb8"
 
       def install
         bin.install "raftt"

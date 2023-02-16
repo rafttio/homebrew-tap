@@ -12,7 +12,7 @@ class RafttEdge < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v111.0.68/raftt_111.0.68_darwin_arm64.tar.gz"
-      sha256 "e4eb979abe95d2666faae199fd71d4443a3578626c1dcd86ccf20872e2892da1"
+      sha256 "09783688ec907144b4ae714f43d1ba252bdb235b6c936456c271b72976bf0874"
 
       def install
         bin.install "raftt"
@@ -32,7 +32,7 @@ class RafttEdge < Formula
     end
     if Hardware::CPU.intel?
       url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v111.0.68/raftt_111.0.68_darwin_amd64.tar.gz"
-      sha256 "3d43313e91bbb8ceb86db6fba6c0005c1c53c3c2a9f2d2687905a874bd951d39"
+      sha256 "6c3be17156dea6849de1261a7e045beaa2e65150cf2e9f5ecdcd99299b1d8294"
 
       def install
         bin.install "raftt"
@@ -55,7 +55,7 @@ class RafttEdge < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v111.0.68/raftt_111.0.68_linux_amd64.tar.gz"
-      sha256 "7b9bf04323b451c8290df3e8295996da203be2c84302814b0baf55e21b467607"
+      sha256 "e6c7708959a8ba249eba356fc849caa88c18e9a4e78d988453ca69f5fa98ccec"
 
       def install
         bin.install "raftt"

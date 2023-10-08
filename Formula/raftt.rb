@@ -5,14 +5,14 @@
 class Raftt < Formula
   desc "Manage your development environment with ease"
   homepage "https://raftt.io/"
-  version "116.2.0"
+  version "117.4.1"
 
   depends_on "bash"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v116.2.0/raftt_116.2.0_darwin_arm64.tar.gz"
-      sha256 "57101261af03318fafc1704b7eac55f31737b1c218b4dac92a82583e08697849"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v117.4.1/raftt_117.4.1_darwin_arm64.tar.gz"
+      sha256 "b4f7975fae7c2223823b9e9bec7d6e87bfcf4c1b018e717edc6c83799aa00de3"
 
       def install
         bin.install "raftt"
@@ -31,8 +31,8 @@ class Raftt < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v116.2.0/raftt_116.2.0_darwin_amd64.tar.gz"
-      sha256 "6c240c2fec62ddec667dae29a71cfac8293e65b9a3597e30ed5564a6a238d2c8"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v117.4.1/raftt_117.4.1_darwin_amd64.tar.gz"
+      sha256 "ea56a8ed6ac161a461577d55f03de8262d4a2db52cf9684ad3c7f31dbae64b66"
 
       def install
         bin.install "raftt"
@@ -54,8 +54,8 @@ class Raftt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v116.2.0/raftt_116.2.0_linux_amd64.tar.gz"
-      sha256 "9cb6005edbabf91aef649c286033afc4dcd3f02f259cd1ef5ad4023606d989f5"
+      url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v117.4.1/raftt_117.4.1_linux_amd64.tar.gz"
+      sha256 "fe9196a8cf2abda5af237b1fe113184d6f83e29f2f5ec1ed00edef673391462d"
 
       def install
         bin.install "raftt"

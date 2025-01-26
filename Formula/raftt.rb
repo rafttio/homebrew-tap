@@ -12,7 +12,7 @@ class Raftt < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://raftt-resources.s3.eu-central-1.amazonaws.com/cli/v124.1.0/raftt_124.1.0_darwin_arm64.tar.gz"
-      sha256 "9400b6427c1e7d838dd651107681c49c54dfa686d0bddd058e4b5c579ff95ff5"
+      sha256 "13d5f21d1350121fba81fba6e6b00770f06d558b56db991ca71605634f28677e"
 
       def install
         bin.install "raftt"
